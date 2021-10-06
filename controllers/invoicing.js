@@ -29,8 +29,8 @@ const app = express();
     doc.text("Main Contact", 18, 90);
     doc.text("Email", 18, 95);
     doc.text("Mobile", 18, 100);
-    //doc.text(JSON.stringify(req.body.Confirmation), 95, 80);
-    doc.addImage("https://ik.imagekit.io/bwcdq46tkc8/s4b-consulting/s4b-logo-long_eZmAw6pklB_.png?updatedAt=1631192744046&tr=w-1200,h-628,fo-auto", "png", 15, 20, 150, 40);
+    doc.text(JSON.stringify(req.body.Confirmation), 95, 80);
+    //doc.addImage("https://ik.imagekit.io/bwcdq46tkc8/s4b-consulting/s4b-logo-long_eZmAw6pklB_.png?updatedAt=1631192744046&tr=w-1200,h-628,fo-auto", "png", 15, 20, 150, 40);
     
     doc.save(path.join('./'+process.cwd(), 'public/docs') + "/"+req.body.Confirmation + ".pdf");
 
@@ -46,9 +46,6 @@ const app = express();
     //doc.save(path.join('./'+process.cwd(), 'public/docs') + "/a4.pdf");
     //doc.save(path.join('./'+process.cwd(), 'public/docs') + "/"+req.body.Confirmation + ".pdf");
 
-
-
-    
 
 
     const s3 = new AWS.S3({
