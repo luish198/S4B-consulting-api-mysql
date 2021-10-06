@@ -1,0 +1,10 @@
+POST http://localhost:8080/clients/newquote
+Content-Type: application/json
+
+{
+    "QUOTE_REF": 1001,
+    "CLIENT_ID": 1,
+    "PRECONFIRMATION_ID":1,
+    "QUOTECODE": 1 
+
+}

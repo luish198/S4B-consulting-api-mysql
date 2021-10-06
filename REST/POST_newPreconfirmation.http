@@ -1,0 +1,10 @@
+POST http://localhost:8080/orders/newpreorder
+Content-Type: application/json
+
+{
+
+    "PROJECT_ID": 1003,
+    "CLIENT_ID": 2,
+    "NET_AMOUNT": 1500
+    
+}
