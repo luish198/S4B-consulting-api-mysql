@@ -18,7 +18,11 @@ const app = express();
 
 //app.get("/pdf", function (req, res) {
 
+   console.log(path.join(__dirname, 'public/docs/'))
+
    const sentInvoiceAndEmailLink = (req,res)=>{
+
+    
 
 
     //1.CREATE A PDF
@@ -31,9 +35,10 @@ const app = express();
     doc.text("Mobile", 18, 100);
     doc.text(JSON.stringify(req.body.Confirmation), 95, 80);
     //doc.addImage("https://ik.imagekit.io/bwcdq46tkc8/s4b-consulting/s4b-logo-long_eZmAw6pklB_.png?updatedAt=1631192744046&tr=w-1200,h-628,fo-auto", "png", 15, 20, 150, 40);
-    
-    doc.save(path.join('./'+process.cwd(), 'public/docs') + "/"+req.body.Confirmation + ".pdf");
-
+    const docsFolder = path.join(__dirname, 'public', 'docs')
+    //doc.save(path.join('./'+process.cwd(), 'public/docs') + "/"+req.body.Confirmation + ".pdf");
+    doc.save(path.join(docsFolder, req.body.Confirmation + ".pdf"));
+     
    
 
 
@@ -58,7 +63,9 @@ const app = express();
     //fs.readFile(process.cwd() + "/a4.pdf", 'utf8', (err, data) => {
     //fs.readFile(path.join(__dirname, "public/docs") + "/a4.pdf", 'utf8', (err, data) => {
     //fs.readFile(path.join('./'+process.cwd(), "public/docs") + "/a4.pdf", 'utf8', (err, data) => {
-      fs.readFile(path.join('./'+process.cwd(), "public/docs") + "/" + req.body.Confirmation +".pdf", 'utf8', (err, data) => {
+    //fs.readFile(path.join('./'+process.cwd(), "public/docs") + "/" + req.body.Confirmation +".pdf", 'utf8', (err, data) => {
+        fs.readFile(path.join(docsFolder, req.body.Confirmation +".pdf"), 'utf8', (err, data) => {
+
 
 
         if (err) {

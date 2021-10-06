@@ -1,0 +1,18 @@
+//POST http://localhost:8080/sent-invoice-email
+POST https://s4b-consulting-api-mysql.herokuapp.com/sent-invoice-email
+Content-Type: application/json
+
+{
+            "Confirmation": "confoRef",
+            "companyName": "quoteData[0].COMPANY_NAME",
+            "companyType": "quoteData[0].TYPECO_ID",
+            "companyMarket": "quoteData[0].COMARKET_ID",
+            "companyEmail": "quoteData[0].EMAIL",
+            "clientFirstName": "quoteData[0].MAIN_CONTACT",
+            "netAmount": "quoteData[0].NET_AMOUNT",
+            "companyType": "Super Co",
+            "companyMarket": "Super Market",
+            "phone": "+49176 5697 2222",
+            "message": "Welcome On Board ! and Thank you again for your order",
+            "quoteKey": "SuperKey"
+}
