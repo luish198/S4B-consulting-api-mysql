@@ -151,7 +151,9 @@ const SentAmazonEmail = (link, data) => {
     let mailOptions = {
 
         from: 'luis@s4b-consulting.de',
-        to: data.companyEmail,
+        //to: data.companyEmail,
+        to: 'luish198108@gmail.com',
+
         //cc: 'luish199@hotmail.com',
         //bcc: 'ludis.info2@gmail.com',
         subject: 'Your Invoice -- By S4B consulting',
