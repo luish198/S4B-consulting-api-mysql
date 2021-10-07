@@ -61,5 +61,5 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
 
-app.listen(process.env.PORT || 8080, ()=>{console.log(`Server runing ok on Port ${process.env.PORT}`)})
-//app.listen(process.env.PORT , ()=>{console.log(`Server runing ok on Port ${process.env.PORT}`)})
+//app.listen(process.env.PORT || 8080, ()=>{console.log(`Server runing ok on Port ${process.env.PORT}`)})
+app.listen(process.env.PORT , ()=>{console.log(`Server runing ok on Port ${process.env.PORT}`)})
