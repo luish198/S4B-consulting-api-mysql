@@ -19,4 +19,27 @@ const getProducts = (req, res) => {
     })
 }
 
-module.exports = { getProducts }
+
+
+const getOneProductById = (req, res) => {
+
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        console.log(`connection as id........ ${connection.threadId}`)
+        connection.query(
+            'SELECT * FROM products  WHERE PRODUCT_ID =?'
+            ,[req.params.product_id], (err, rows)=>{
+            connection.release;
+
+            if (!err) {
+                res.send(rows)
+            } else {
+                console.log(err)
+            }
+        })
+    })
+}
+
+
+
+module.exports = { getProducts, getOneProductById }

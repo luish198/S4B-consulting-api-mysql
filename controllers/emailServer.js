@@ -21,7 +21,11 @@ const SentQuoteEmail = (req, res) => {
     <li>Phone: ${req.body.phone}</li>
     <li>Client Email: ${req.body.companyEmail}</li>
     <li>...</li>
-    <li>Offer Price £: ${req.body.priceOffer}</li>    
+    <li>Project: ${req.body.priceOffer}</li>
+    <li>...</li>
+    <li>Product: ${req.body.priceOffer}</li>
+    <li>Offer Price £: ${req.body.priceOffer}</li>
+
     </ul>
 
     <img src="https://ik.imagekit.io/bwcdq46tkc8/s4b-consulting/invoiceBar_yxKmWNfJm.png?updatedAt=1633509918647" alt="HTML5 Icon" width="380" height="60">

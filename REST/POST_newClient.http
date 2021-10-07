@@ -2,8 +2,8 @@ POST http://localhost:8080/clients/newclient
 Content-Type: application/json
 
 {
-    "COMPANY_NAME": "Test Client Post Luis H III",
+    "COMPANY_NAME": "Test Client Post Luis H IIII",
     "TYPECO_ID": 1,
     "COMARKET_ID":1
-    
+
 }
